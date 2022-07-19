@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <th *ngFor="let col of data.cols">
+      {{ col.name }}
+    </th>
+    <th><button (click)="add()">Add</button></th>
+  </tr>
+  <tr *ngFor="let row of data.rows">
+    <td *ngFor="let col of data.cols">
+      {{ row[col.id] }}
+    </td>
+    <td>
+      <button (click)="mod(row)">Edit</button>
+      <button (click)="del(row)">Delete</button>
+    </td>
+  </tr>
+</table>
